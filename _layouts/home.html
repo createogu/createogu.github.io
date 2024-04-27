@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<header>
+  <div style="text-align: left;">
+    <img style="width: 100%; min-width: 100px; max-width: 200px; border-radius: 50%; object-fit: cover;" src="/assets/img/logo.jpeg" alt="Logo">
+  </div> 
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</header>
+
+{%- include menu_item.html collection=site.data.menu.entries -%}
+
+{{ content }}

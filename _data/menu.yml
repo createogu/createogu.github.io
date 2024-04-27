@@ -1,0 +1,35 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: 정보
+    entries:
+      - title: 공기업 전산직으로 시스템 운영 업무를 맡고 있음.
+      - title: 전형적인 공공기관 SM으로 스프링 기반 웹시스템 경험만 있음.
+      - title: 이를 극복하고자 개인적으로 토이프로젝트를 하고 있음.
+
+  - title: 전체 글
+    post_list:
+      limit: 3
+      show_more: true
+      show_more_text: 전체 글 목록...
+      show_more_url: archive.html
+
+  - title: 블로그만들기
+    post_list:
+      limit: 3
+      category: 블로그만들기
+      show_more: true
+      show_more_text: 전체 글 목록...
+      show_more_url: category.html
+
+  - title: 인생회고
+    post_list:
+      limit: 3
+      category: 인생회고
+      show_more: true
+      show_more_text: 전체 글 목록...
+      show_more_url: category.html
+
+  - title: rss
+    url: feed.xml

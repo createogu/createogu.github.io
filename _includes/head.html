@@ -1,0 +1,59 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    {%- if page.title -%}
+      {{ page.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
+
+  {%-seo title=false-%}
+  {%-feed_meta-%}
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var timeagoElements = document.querySelectorAll('.timeago');
+    timeagoElements.forEach(function(element) {
+        var datetime = element.getAttribute('datetime');
+        if(datetime) {
+            element.textContent = timeAgo(new Date(datetime));
+        }
+    });
+});
+
+function timeAgo(date) {
+    var now = new Date();
+    var seconds = Math.floor((now - date) / 1000);
+    var interval = seconds / 31536000;
+
+    if (interval > 1) {
+        return Math.floor(interval) + " 년 전";
+    }
+    interval = seconds / 2592000;
+    if (interval > 1) {
+        return Math.floor(interval) + " 개월 전";
+    }
+    interval = seconds / 86400;
+    if (interval > 1) {
+        return Math.floor(interval) + " 일 전";
+    }
+    interval = seconds / 3600;
+    if (interval > 1) {
+        return Math.floor(interval) + " 시간 전";
+    }
+    interval = seconds / 60;
+    if (interval > 1) {
+        return Math.floor(interval) + " 분 전";
+    }
+    return Math.floor(seconds) + " 초 전";
+}
+
+  </script>
+</head>
