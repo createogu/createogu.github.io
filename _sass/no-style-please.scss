@@ -19,15 +19,22 @@ body[a="dark"] { @include dark-appearance; }
 // bg color is also needed in html in order to
 // block body's background propagation
 // see: https://stackoverflow.com/a/61265706
+@font-face {
+  font-family: 'D2Coding';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body { background: white; }
 
 html { height: 100%; }
 
 body {
   color: black;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 1.4;
+  font-family: 'D2Coding'; /* 폰트 적용 */
+  font-size: 14px;
+  line-height: 1.8;
   margin: 0;
   min-height: 100%;
   overflow-wrap: break-word;
@@ -89,7 +96,8 @@ blockquote {
 }
 
 img {
-  max-width: 100%;
+  max-width: 50%;
   display: block;
   margin: 0 auto;
 }
+
