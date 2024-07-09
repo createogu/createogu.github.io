@@ -15,10 +15,26 @@ entries:
       show_more_text: 전체 글 목록...
       show_more_url: archive.html
 
-  - title: 프로젝트
+  - title: 개발_공통
     post_list:
       limit: 3
-      category: 프로젝트
+      category: 개발_공통
+      show_more: true
+      show_more_text: 전체 글 목록...
+      show_more_url: category.html
+
+  - title: 개인_프로젝트
+    post_list:
+      limit: 3
+      category: 개인_프로젝트
+      show_more: true
+      show_more_text: 전체 글 목록...
+      show_more_url: category.html
+
+  - title: 외주_프로젝트
+    post_list:
+      limit: 3
+      category: 외주_프로젝트
       show_more: true
       show_more_text: 전체 글 목록...
       show_more_url: category.html
@@ -29,7 +45,7 @@ entries:
       category: 인생회고
       show_more: true
       show_more_text: 전체 글 목록...
-      show_more_url: category.html
+      show_more_url: category.html      
 
   - title: rss
     url: feed.xml
